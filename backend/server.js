@@ -9,11 +9,11 @@ app.use(cors());
 
 const server = http.createServer(app);
 const io = new Server(server, { 
-    cors: {origin: "http://localhost:3000"},
+    cors: {origin: ["http://localhost:3000", "http://wednesdaygallo.com/chat-app"]},
     methods: [ "GET", "POST"]
 });
 
-const port = 3001;
+const port = process.env.PORT || 3001;
 
 
 io.on('connection', (socket) => {
