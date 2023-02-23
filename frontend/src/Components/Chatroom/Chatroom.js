@@ -5,7 +5,7 @@ import './Chatroom.scss'
 
 import Messages from '../Messages/Messages';
 
-const socket = io('https://chat-app.onrender.com');
+const socket = io('https://chat-app-ttcd.onrender.com');
 
 
 export default function Chatroom(props) {
